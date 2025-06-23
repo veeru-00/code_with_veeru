@@ -44,8 +44,8 @@ int main(void)
 	return 0;
 }
 ```
-//Implement a C program to create a new directory named "Test" in the current 
-//directory? 
+3.Implement a C program to create a new directory named "Test" in the current directory? 
+```
 #include<stdio.h>
 #include<sys/stat.h>
 #include<sys/types.h>
@@ -63,8 +63,9 @@ int main(void)
 	}
 	return 0;
 }
-
-//4. Write a C program to check if a file named "sample.txt" exists in the current directory?
+```
+4. Write a C program to check if a file named "sample.txt" exists in the current directory?
+```
 #include<stdio.h>
 #include<unistd.h>
 #include<fcntl.h>
@@ -93,7 +94,9 @@ int main(void)
         printf("File does not exist\n");
     }
 */
-//5. Develop a C program to rename a file from "oldname.txt" to "newname.txt"?
+```
+5. Develop a C program to rename a file from "oldname.txt" to "newname.txt"?
+```
 #include<stdio.h>
 int main(void)
 {
@@ -109,7 +112,9 @@ int main(void)
 	}
 	return 0;
 }
-//6. Implement a C program to delete a file named "delete_me.txt"?
+```
+6. Implement a C program to delete a file named "delete_me.txt"?
+```
 #include<stdio.h>
 int main(void)
 {
@@ -124,8 +129,9 @@ int main(void)
 	}
 	return 0;
 }
-
-//Write a C program to copy the contents of one file to another?
+```
+7.Write a C program to copy the contents of one file to another?
+```
 #include<stdio.h>
 #include<fcntl.h>
 #include<unistd.h>
@@ -144,8 +150,9 @@ int main(int argc,char *argv[])
 	close(fdsrc);
 	close(fddst);
 }
-
-//Develop a C program to move a file from one directory to another?
+```
+8.Develop a C program to move a file from one directory to another?
+```
 #include<stdio.h>
 int main(int argc,char *argv[])
 {
@@ -160,8 +167,9 @@ int main(int argc,char *argv[])
 	}
 	return 0;
 }
-
-//Implement a C program to list all files in the current directory?
+```
+9.Implement a C program to list all files in the current directory?
+```
 #include<stdio.h>
 #include<dirent.h>
 int main(void)
@@ -181,7 +189,9 @@ int main(void)
 	}
 	return 0;
 }
-// Write a C program to get the size of a file named "file.txt"?
+```
+10.Write a C program to get the size of a file named "file.txt"?
+```
 #include<stdio.h>
 int main(int argc,char *argv[])
 {
@@ -199,10 +209,9 @@ int main(int argc,char *argv[])
 	printf("SIZE of the file is :%ld",size);
 	return 0;
 }
-
-
-
-//. Develop a C program to check if a directory named "Test" exists in the current directory
+```
+11. Develop a C program to check if a directory named "Test" exists in the current directory
+```
 #include<stdio.h>
 #include<dirent.h>
 int main(void)
@@ -220,9 +229,9 @@ int main(void)
 	}
 	return 0;
 }
-
-
-// Implement a C program to create a new directory named "Backup" in the parent directory
+```
+12.Implement a C program to create a new directory named "Backup" in the parent directory
+```
 #include<stdio.h>
 #include<sys/stat.h>
 #include<sys/types.h>
@@ -247,10 +256,12 @@ int main(void)
 	}
 	return 0;
 }
-//Write a C program to recursively list all files and directories in a given directory
+```
+13.Write a C program to recursively list all files and directories in a given directory
 #include<stdio.h>
 
-//Develop a C program to delete all files in a directory named "Temp"?
+14.Develop a C program to delete all files in a directory named "Temp"?
+```
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
@@ -292,9 +303,9 @@ int main(void)
 	closedir(dir);
 	return 0;
 }
-
-
-// Implement a C program to count the number of lines in a file named "data.txt"?
+```
+15.Implement a C program to count the number of lines in a file named "data.txt"?
+```
 #include<stdio.h>
 int main(void)
 {
@@ -321,8 +332,9 @@ int main(void)
 	printf("Number of lines in file:%d\n",lines);
 	return 0;
 }
-
-// Write a C program to append "Goodbye!" to the end of an existing file
+```
+16.Write a C program to append "Goodbye!" to the end of an existing file
+```
 #include<stdio.h>
 int main(void)
 {
@@ -337,8 +349,9 @@ int main(void)
 	printf("File appened succesfully");
 	return 0;
 }
-
-// Implement a C program to change the permissions of a file named "file.txt" to read only
+```
+17.Implement a C program to change the permissions of a file named "file.txt" to read only
+```
 #include<stdio.h>
 #include<sys/stat.h>
 int main()
@@ -355,7 +368,9 @@ int main()
 	}
 	return 0;
 }
-//. Write a C program to change the ownership of a file named "file.txt" to the user "user1"?
+```
+18. Write a C program to change the ownership of a file named "file.txt" to the user "user1"?
+```
 #include<stdio.h>
 #include<unistd.h>
 #include<pwd.h>
@@ -379,7 +394,9 @@ int main(void)
 	printf("ownership is changed");
 	return 0;
 }
-//19. Develop a C program to get the last modified timestamp of a file named "file.txt"?
+```
+19. Develop a C program to get the last modified timestamp of a file named "file.txt"?
+```
 #include<stdio.h>
 #include<sys/stat.h>
 #include<time.h>
@@ -395,8 +412,9 @@ int main()
 	printf("Last modified time of %s: %s",file,ctime(&filestat.st_mtime));
 	return 0;
 }
-
-// Implement a C program to create a temporary file and write some data to it?
+```
+20.Implement a C program to create a temporary file and write some data to it?
+```
 #include<stdio.h>
 #include<stdlib.h>
 int main(void)
@@ -417,8 +435,9 @@ int main(void)
 	fclose(tmp);
 	return 0;
 }
-
-//Write a C program to check if a given path refers to a file or a directory?
+```
+21.Write a C program to check if a given path refers to a file or a directory?
+```
 #include<stdio.h>
 #include<sys/stat.h>
 #include<stdlib.h>
@@ -440,6 +459,7 @@ int main(int argc,char *argv[])
 
     return 0;
 }
+```
 //. Develop a C program to create a hard link named "hardlink.txt" to a file named "source.txt"?
 #include<stdio.h>
 #include<unistd.h>
