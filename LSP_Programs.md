@@ -18,8 +18,10 @@ int main(void)
 	printf("written %d bytes into the file\n",ret);
 	close(fd);
 	return 0;
-}	
-// Develop a C program to open an existing text file and display its contents?
+}
+```
+2.Develop a C program to open an existing text file and display its contents?
+```
 #include<stdio.h>
 #include<fcntl.h>
 #include<unistd.h>
