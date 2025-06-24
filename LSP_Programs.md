@@ -460,7 +460,8 @@ int main(int argc,char *argv[])
     return 0;
 }
 ```
-//. Develop a C program to create a hard link named "hardlink.txt" to a file named "source.txt"?
+22. Develop a C program to create a hard link named "hardlink.txt" to a file named "source.txt"?
+```
 #include<stdio.h>
 #include<unistd.h>
 
@@ -482,8 +483,9 @@ int main(void)
 
     return 0;
 }
-
-// Implement a C program to read and display the contents of a CSV file named "data.csv"
+```
+23. Implement a C program to read and display the contents of a CSV file named "data.csv"
+```
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -508,8 +510,9 @@ int main(void)
     fclose(file);
     return 0;
 }
-
-//Write a C program to get the absolute path of the current working directory?
+```
+24.Write a C program to get the absolute path of the current working directory?
+```
 #include <stdio.h>
 #include <unistd.h>
 #include <limits.h>
@@ -531,8 +534,9 @@ int main(void)
 
     return 0;
 }
-
-//Develop a C program to get the size of a directory named "Documents"?
+```
+25.Develop a C program to get the size of a directory named "Documents"?
+```
 #include<stdio.h>
 #include<sys/stat.h>
 #include<dirent.h>
@@ -567,12 +571,13 @@ int main(void)
 	printf("Total size of files in '%s':%ld bytes\n",dpath,size);
 	return 0;
 }
-
-
-// Implement a C program to recursively copy all files and directories from one directory to another
+```
+26.Implement a C program to recursively copy all files and directories from one directory to another
+```
 #include<stdio.h>
-
-// Write a C program to get the number of files in a directory named "Images"?
+```
+27.Write a C program to get the number of files in a directory named "Images"?
+```
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -610,8 +615,9 @@ int main(void) {
     printf("Number of files in '%s': %d\n", dirpath, file_count);
     return 0;
 }
-
-// Develop a C program to create a FIFO (named pipe) named "myfifo" in the current directory
+```
+Develop a C program to create a FIFO (named pipe) named "myfifo" in the current directory
+```
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
@@ -629,8 +635,9 @@ int main(void) {
     printf("FIFO '%s' created successfully.\n", fifo_path);
     return 0;
 }
-
+```
 //mplement a C program to read data from a FIFO named "myfifo"?
+```
 #include <stdio.h>
 #include <stdlib.h>
 #include <fcntl.h>
@@ -662,8 +669,9 @@ int main(void) {
     close(fd);
     return 0;
 }
-
+```
 // Write a C program to truncate a file named "file.txt" to a specified length?
+```
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
@@ -686,9 +694,10 @@ int main(void) {
     printf("File '%s' truncated to %ld bytes successfully.\n", filename, (long)new_length);
     return 0;
 }
-
+```
 //. Develop a C program to search for a specific string in a file named "data.txt" and 
 //display the line number(s) where it occurs? 
+```
 #include<stdio.h>
 #include<string.h>
 int main(void)
@@ -726,8 +735,10 @@ int main(void)
 	fclose(file);
 	return 0;
 }
+```
 // Implement a C program to get the file type (regular file, directory, symbolic link, etc.) of 
 //a given path?
+```
 #include<stdio.h>
 #include<sys/stat.h>
 #include<unistd.h>
@@ -762,7 +773,9 @@ int main(void)
 
     return 0;
 }
+```
 // Develop a C program to get the permissions (mode) of a file 
+```
 #include<stdio.h>
 #include<sys/stat.h>
 int main(int argc,char *argv[])
@@ -794,10 +807,10 @@ int main(int argc,char *argv[])
     printf("\n");
     return 0;
 }
-
-
+```
 // Implement a C program to recursively delete a directory named "Temp" and all its 
 //contents?
+```
 #include<stdio.h>
 #
 //36. Write a C program to read and display the first 10 lines of a file named "log.txt"?
@@ -825,10 +838,10 @@ int main() {
     fclose(file); // Close the file
     return 0;
 }
-
-
+```
 // Develop a C program to read data from a text file named "input.txt" and write it to 
 //another file named "output.txt" in reverse order?
+```
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -869,8 +882,9 @@ int main() {
     fclose(fout);
     return 0;
 }
-
+```
 //Implement a C program to create a new directory named with the current date in the format "YYYY-MM-DD"? 
+```
 #include <stdio.h>
 #include <time.h>
 #include <sys/stat.h>
@@ -898,7 +912,9 @@ int main(void)
   }
   return 0;
 }
+```
 //Write a C program to read and display the contents of a binary file named "binary.bin"?  
+```
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -928,7 +944,9 @@ int main(void)
   fclose(file);
   return 0;
 }
+```
 //Develop a C program to get the size of the largest file in a directory?
+```
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -956,7 +974,6 @@ int main(void)
   }
   return 0;
 }
-
 off_t get_largest_file_size(const char *path, char *largest_file_path) 
 {
   struct dirent *entry;
@@ -1002,8 +1019,9 @@ off_t get_largest_file_size(const char *path, char *largest_file_path)
   closedir(dir);
   return max_size;
 }
-
+```
 //Implement a C program to check if a file named "data.txt" is readable?
+```
 #include <stdio.h>
 #include <unistd.h>
 
@@ -1021,7 +1039,9 @@ int main(void)
   }
   return 0;
 }
+```
 //Write a C program to create a new directory named "Logs" and move all files with the ".log" extension into it?
+```
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -1078,7 +1098,9 @@ int main(void)
   closedir(d);
   return 0;
 }
+```
 //Develop a C program to check if a file named "config.ini" is writable?
+```
 #include <stdio.h>
 #include <unistd.h>
 
@@ -1097,7 +1119,9 @@ int main(void)
   }
   return 0;
 }
+```
 //Implement a C program to read the contents of a text file named "instructions.txt" and execute the instructions as shell commands?
+```
 #include <stdio.h>
 
 int main(void) 
@@ -1117,7 +1141,9 @@ int main(void)
   printf("instructions.txt created successfully.\n");
   return 0;
 }
+```
 //Write a C program to get the number of hard links to a file named "file.txt"?
+```
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/stat.h>
@@ -1135,8 +1161,9 @@ int main(void)
   printf("Number of hard links to file.txt: %lu\n", (unsigned long)fileStat.st_nlink);
   return 0;
 }
-
+```
 // Develop a C program to copy the contents of all text files in a directory into a single file named "combined.txt"?
+```
 #include <stdio.h>
 #include <dirent.h>
 #include <string.h>
@@ -1185,7 +1212,9 @@ int main(void)
   printf("All text files have been combined into combined.txt\n");
   return 0;
 }
+```
 //Implement a C program to recursively calculate the total size of all files in a directory and its subdirectories?     
+```
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -1238,8 +1267,9 @@ long long get_directory_size(const char *path)
   closedir(dir);
   return total_size;
 }
-
+```
 //Write a C program to get the number of bytes in a file named "data.bin"?
+```
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -1264,8 +1294,9 @@ int main(void)
   printf("Size of data.bin: %ld bytes\n", size);
   return 0;
 }
-
+```
 //Develop a C program to create a new directory named with the current timestamp in the format "YYYY-MM-DD-HH-MM-SS"? 
+```
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -1294,7 +1325,9 @@ int main(void)
   }
   return 0;
 }
+```
 //Implement a C program to open a file named "data.txt" in read mode and display its contents?  
+```
 #include <stdio.h>
 
 int main(void) 
@@ -1317,7 +1350,9 @@ int main(void)
   fclose(fp);
   return 0;
 }
+```
 //Write a C program to create a symbolic link named "link.txt" to a file named "target.txt"? 
+```
 #include <stdio.h>
 #include <unistd.h>
 
@@ -1335,7 +1370,9 @@ int main(void)
   }
   return 0;
 }
+```
 //Implement a C program to read and display the contents of a binary file named "binary.bin"?
+```
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -1362,8 +1399,9 @@ int main(void)
   fclose(file);
   return 0;
 }
-
+```
 //Develop a C program to read data from a binary file named "data.bin" and display it in hexadecimal format?   
+```
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -1391,3 +1429,4 @@ int main(void)
   fclose(fp);
   return 0;
 } 
+```
