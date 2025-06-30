@@ -880,9 +880,60 @@ int main(void)
 	return 0;
 }
 
-//31.Implement a C program to create a thread that performs multiplication of two matrices?
+31.Implement a C program to create a thread that performs multiplication of two matrices?
+```
 #include<stdio.h>
 #include<pthread.h>
+#define ROW1 3
+#define COL1 4
+#define ROW2 4
+#define COL2 2
 void *fun(void *arg)
 {
-
+        int mat1[ROW1][COL1],mat2[ROW2][COL2],mat3[ROW1][COL2],i,j;
+        for(i=0;i<ROW1;i++)
+        {
+                for(j=0;j<COL1;j++)
+                {
+                        printf("Enter the elements of matrix1:");
+                        scanf("%d",&mat1[i][j]);
+                }
+        }
+        for(i=0;i<ROW2;i++)
+        {
+                for(j=0;j<COL2;j++)
+                {
+                        printf("Elements of matrix2:");
+                        scanf("%d",&mat2[i][j]);
+                }
+        }
+        //Multiplication
+        for(i=0;i<ROW1;i++)
+        {
+                for(j=0;j<COL2;j++)
+                {
+                        mat3[i][j]=0;
+                        for(int k=0;k<ROW2;k++)
+                        {
+                                mat3[i][j]+=mat1[i][k]*mat2[k][j];
+                        }
+                }
+        }
+        printf("The resultant matrix is:");
+        for(i=0;i<ROW1;i++)
+        {
+                for(j=0;j<COL2;j++)
+                {
+                        printf("%d",mat3[i][j]);
+                }
+        }
+        return NULL;
+}
+int main(void)
+{
+        pthread_t pt;
+        pthread_create(&pt,NULL,fun,NULL);
+        pthread_join(pt,NULL);
+        return 0;
+}
+```
