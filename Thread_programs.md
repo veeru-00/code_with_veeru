@@ -22,7 +22,7 @@ int main(void)
 2.Modify the above program to create multiple threads, each printing its own message?
 ```
 #include<stdio.h>
-#include<stdlib.h>
+#include<stdlib.h>-
 #include<pthread.h>
 void *thread_1(void *arg)
 {
@@ -927,6 +927,31 @@ void *fun(void *arg)
                         printf("%d",mat3[i][j]);
                 }
         }
+        return NULL;
+}
+int main(void)
+{
+        pthread_t pt;
+        pthread_create(&pt,NULL,fun,NULL);
+        pthread_join(pt,NULL);
+        return 0;
+}
+```
+32.Develop a C program to create a thread that calculates the average of numbers from 1 to 100?
+```
+#include<stdio.h>
+#include<pthread.h>
+void *fun(void *arg)
+{
+        int num=100,i=0;
+        float sum,avg;
+        while(i<=num)
+        {
+                sum=sum+i;
+                i++;
+        }
+        avg=sum/num;
+        printf("Average :%.2f",avg);
         return NULL;
 }
 int main(void)
