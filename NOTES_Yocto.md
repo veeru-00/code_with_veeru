@@ -1,1 +1,280 @@
+# Embedded Linux Course
 
+## 1. Introduction
+
+* Outline and Course Promotion
+* Introduction to Embedded Systems
+* Introduction to Embedded Linux Systems
+
+## 2. Embedded Linux System Development
+
+* Embedded Linux System Images and Development Environment
+* Linux-running Hardware and How Linux Boots
+* Linux Distributions and Package Managers
+
+## 3. Yocto Project Basics
+
+* Introduction to Yocto Project and Its Terminology
+* Yocto Project Architecture
+* Environment Setup and Downloading Poky Reference Distribution
+* Yocto Project Basic Configuration and Examining Poky Source
+* Poky Source Folders and Files Explained
+
+## 4. Layers
+
+* Yocto Project Layers
+* Creating Our Own Layer
+
+## 5. Raspberry Pi and Basic Configuration
+
+* Raspberry Pi Introduction and Console Setup
+* Flashing SD Card and Examining Build Outputs
+
+## 6. Recipes
+
+* Introduction to Recipes
+* Creating a Recipe for Software Package That Uses GNU Make
+* Creating a Recipe for Software Package That Uses CMake
+* Creating Recipe Skeletons with GoYocto Tool
+* Creating Example PyPi Recipe
+
+## 7. Adding Support for 3rd Party Software
+
+* Adding Graphical Desktop Environment to Yocto Project Images
+* Adding Qt6 Support and Creating Recipe for Qt6 Application
+
+## 8. Application SDK and DEVTOOL
+
+* Application SDK
+* Patching Source Files Using DEVTOOL
+
+## 9. Machines
+
+* Machines
+* Creating Our Own Machine Configuration
+
+## 10. Linux Kernel Modifications
+
+* Modifying Linux Kernel Configuration
+* Modifying Linux Kernel Source and Changing Kernel Version
+
+## 11. Additional Lectures (On Demand)
+
+* Building, Debugging, and Deploying Qt6 Application
+
+---
+
+## Embedded System Overview
+
+An embedded system is a combination of computer hardware and software designed for a specific purpose.
+
+### Characteristics
+
+* Equipped with a processing unit
+* Includes temporary memory and permanent storage
+* Part of larger systems
+* Customized for specific purposes
+* Cost-effective compared to general-purpose systems
+
+### Real-world Impact
+
+* Embedded systems are integral to daily life
+
+---
+
+## Security System Example
+
+### Option 1: Generic Purpose Computer
+
+**Approach:** Use PC + camera + OpenCV
+
+**Pros:**
+
+* Fast development
+
+**Cons:**
+
+* Not product-friendly (large, slow, costly, insecure)
+
+### Option 2: Raspberry Pi
+
+**Pros:**
+
+* Lower cost
+* Compact
+
+**Cons:**
+
+* Contains unnecessary hardware
+
+### Option 3: Custom Embedded System
+
+**Approach:** Custom PCB + camera module + embedded software
+
+**Pros:**
+
+* Cost-optimized
+* Feature-specific design
+
+**Cons:**
+
+* Higher development time and complexity
+
+---
+
+## Introduction to Embedded Linux Systems
+
+### Software & Hardware Perspectives
+
+* Use BSP + OS to customize drivers, apps, libraries
+* Optimize kernel for performance and minimal footprint
+
+### Why Use Linux?
+
+* Complex feature support
+* Open-source ecosystem
+* Security (secure boot, encryption, access control)
+* Real-time extensions available
+
+---
+
+## Linux Software Stack Components
+
+### 1. Applications
+
+* Located in: `/bin`, `/sbin`, `/usr/bin`
+* Examples: BusyBox, Python, OpenSSL
+
+### 2. Services
+
+* Init systems: systemd, upstart, SysV init
+* Examples: UDEV, SSHD, Bluetooth, Network services
+
+### 3. Libraries
+
+* Core: glibc, musl, uClibc
+* Others: QT, Boost, OpenSSL, POSIX, Pthread, EGL, etc.
+
+### 4. System Call Interface
+
+* Interface between user space and kernel
+* Examples: open, close, read, write
+
+### 5. Drivers
+
+* Located in `/dev`
+* Examples: USB, I2C, touchscreen, FM tuner
+
+### 6. Linux Kernel
+
+* MMU, Process Management, IPC, VFS, Network Stack
+
+### Supporting Tools
+
+* Bootloader: Initializes hardware
+* Toolchain: Cross-compilation tools
+* Common tools: GCC, CMake, Make
+
+---
+
+## Customizing Embedded Linux Distributions
+
+### Additions
+
+* Applications, services, libraries, drivers, splash screens
+
+### Omissions
+
+* GUI environments, generic services, unused drivers
+* Minimal bootloader + kernel for fast boot
+
+---
+
+## Yocto Project
+
+### Role
+
+* Framework for building custom embedded Linux distributions
+
+### Core Components
+
+* **BitBake**: Build engine
+* **OpenEmbedded**: Metadata ecosystem
+* **Poky**: Reference distribution
+
+### Build Process
+
+1. Fetch source
+2. Unpack
+3. Patch
+4. Configure & Compile
+5. Package
+6. QA checks
+
+### Metadata Types
+
+* `.bb` - Recipe
+* `.bbclass` - Reusable logic
+* `.bbappend` - Extends recipe
+* `.conf` - Config variables
+* Includes - Shared configurations
+
+### Layers
+
+* meta-raspberrypi
+* meta-ti
+* meta-nxp
+* meta-qt5 / meta-gnome
+
+---
+
+## Yocto Project Architecture Overview
+
+### Inputs to OE Build System
+
+* Configuration files
+* Metadata (recipes, layers)
+* Machine details (device tree, compiler tuning)
+* Source mirrors
+
+### Build Tasks
+
+1. Fetch
+2. Unpack
+3. Patch
+4. Configure & Compile
+5. QA checks
+6. Package
+
+### Outputs
+
+* System Images: Bootloader + Kernel + RootFS
+* SDK: Toolchain + Sysroot + Scripts
+
+### Common BitBake Commands
+
+```sh
+bitbake openssl-ment        # Build single package
+bitbake core-image-minimal  # Build full image
+```
+
+### Getting Started
+
+```sh
+git clone git://git.yoctoproject.org/poky
+cd poky
+git checkout scarthgap
+```
+
+---
+
+## Key Yocto Components Summary
+
+| Component     | Function                            |
+| ------------- | ----------------------------------- |
+| bitbake       | Build engine                        |
+| Metadata      | Describes packages & layers         |
+| Config files  | Control build flow                  |
+| Packages      | DEB, RPM, IPK outputs               |
+| System Images | RootFS with kernel and binaries     |
+| SDK           | For target-specific app development |
