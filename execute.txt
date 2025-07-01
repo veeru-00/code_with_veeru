@@ -1,3 +1,0 @@
-ls
-pwd
-vim +'normal G' +':wq' shell.c
