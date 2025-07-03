@@ -128,6 +128,7 @@ An embedded system is a combination of computer hardware and software designed f
 
 * Use BSP + OS to customize drivers, apps, libraries
 * Optimize kernel for performance and minimal footprint
+![Software_prespective](https://github.com/user-attachments/assets/716a4cea-f1c3-4197-8c4c-87bf5979b8dc)
 
 ### Why Use Linux?
 
@@ -135,10 +136,12 @@ An embedded system is a combination of computer hardware and software designed f
 * Open-source ecosystem
 * Security (secure boot, encryption, access control)
 * Real-time extensions available
+![Uploading Television.jpg…]()
 
 ---
 
 ## Linux Software Stack Components
+![Linux_stack](https://github.com/user-attachments/assets/e46b3cdd-6f6e-444a-9699-b6950841fe7c)
 
 ### 1. Applications
 
