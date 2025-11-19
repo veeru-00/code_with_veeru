@@ -161,7 +161,8 @@ int main(void)
 	return 0;
 }
 ```
-//7.Implement a C program to create a thread that calculates the square of a number?
+7.Implement a C program to create a thread that calculates the square of a number?
+```
 #include<stdio.h>
 #include<pthread.h>
 
@@ -181,8 +182,9 @@ int main(void)
 	pthread_join(t1,NULL);
 	return 0;
 }
-
-//8.Write a C program to create a thread that prints the current date and time?
+```
+8.Write a C program to create a thread that prints the current date and time?
+```
 #include<stdio.h>
 #include<pthread.h>
 #include<time.h>
@@ -204,9 +206,9 @@ int main(void)
 	pthread_join(t1,NULL);
 	return 0;
 }
-
-	
-//9.Develop a C program to create a thread that checks if a number is prime?
+```	
+9.Develop a C program to create a thread that checks if a number is prime?
+```
 #include<stdio.h>
 #include<pthread.h>
 #include<math.h>
@@ -236,8 +238,9 @@ int main(void)
 	pthread_join(tp,NULL);
 	return 0;
 }
-
-//10.Implement a C program to create a thread that checks if a given string is a palindrome?
+```
+10.Implement a C program to create a thread that checks if a given string is a palindrome?
+```
 #include<stdio.h>
 #include<pthread.h>
 #include<string.h>
@@ -277,8 +280,9 @@ int main(void)
 	pthread_join(pt,NULL);
 	return 0;
 }
-
-//11.Write a C program to create a thread that prints "Hello, World!" with thread synchronization? 
+```
+11.Write a C program to create a thread that prints "Hello, World!" with thread synchronization? 
+```
 #include<stdio.h>
 #include<pthread.h>
 pthread_mutex_t lock;
@@ -317,9 +321,9 @@ int main(void)
 	pthread_join(p2,NULL);
 	return 0;
 }
-
-
-//13.Implement a C program to create a thread that generates random numbers and synchronizes access to a shared buffer?
+```
+13.Implement a C program to create a thread that generates random numbers and synchronizes access to a shared buffer?
+```
 #include<stdio.h>
 #include<pthread.h>
 #include<time.h>
@@ -348,8 +352,9 @@ int main(void)
 	pthread_mutex_destroy(&lock);
 	return 0;
 }
-
-//14.Write a C program to create a thread that performs addition of two numbers with mutex locks?
+```
+14.Write a C program to create a thread that performs addition of two numbers with mutex locks?
+```
 #include<stdio.h>
 #include<pthread.h>
 #include<stdlib.h>
@@ -376,8 +381,9 @@ int main(void)
 	pthread_mutex_destroy(&lock);
 	return 0;
 }
-
-//15.Implement a C program to create two threads that increment and decrement a shared variable, respectively, using mutex locks? 
+```
+15.Implement a C program to create two threads that increment and decrement a shared variable, respectively, using mutex locks? 
+```
 #include<stdio.h>
 #include<pthread.h>
 pthread_mutex_t lock;
@@ -414,8 +420,9 @@ int main(void)
 	pthread_join(p2,NULL);
 	return 0;
 }
-
-//16.Develop a C program to create a thread that reads input from the user and synchronizes access to shared resources? 
+```
+16.Develop a C program to create a thread that reads input from the user and synchronizes access to shared resources? 
+```
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
@@ -442,9 +449,9 @@ int main(void)
 	pthread_mutex_destroy(&lock);
 	return 0;
 }
-
-
-//17.Implement a C program to create a thread that prints prime numbers up to a given limit with mutex locks?
+```
+17.Implement a C program to create a thread that prints prime numbers up to a given limit with mutex locks?
+```
 #include<stdio.h>
 #include<pthread.h>
 #include<stdbool.h>
@@ -489,9 +496,9 @@ int main(void)
 	pthread_join(pt,NULL);
 	return 0;
 }
-
-
-//18.Implement a C program to create a thread that calculates the sum of Fibonacci numbers up to a given limit using dynamic programming with mutex locks?
+```
+18.Implement a C program to create a thread that calculates the sum of Fibonacci numbers up to a given limit using dynamic programming with mutex locks?
+```
 #include<stdio.h>
 #include<pthread.h>
 #include<stdlib.h>
@@ -532,8 +539,9 @@ int main(void)
 	printf("Sum of fibonacci series upto %d is %d:",limit,sum);
 	return 0;
 }
-
-//19.Write a C program to create a thread that checks if a given year is a leap year using dynamic programming with mutex locks? 
+```
+19.Write a C program to create a thread that checks if a given year is a leap year using dynamic programming with mutex locks? 
+```
 #include<stdio.h>
 #include<pthread.h>
 pthread_mutex_t lock;
@@ -563,8 +571,9 @@ int main(void)
 	pthread_join(pt,NULL);
 	return 0;
 }
-
-//20.Write a C program to create a thread that checks if a given string is a palindrome using dynamic programming with mutex locks?
+```
+20.Write a C program to create a thread that checks if a given string is a palindrome using dynamic programming with mutex locks?
+```
 #include<stdio.h>
 #include<pthread.h>
 #include<string.h>
@@ -610,8 +619,9 @@ int main(void)
 	pthread_join(pt,NULL);
 	return 0;
 }
-
-//21.Implement a C program to create a thread that performs selection sort on an array of integers? 
+```
+21.Implement a C program to create a thread that performs selection sort on an array of integers? 
+```
 #include<stdio.h>
 #include<pthread.h>
 void *fun(void *arg)
@@ -653,9 +663,9 @@ int main(void)
 	pthread_join(pt,NULL);
 	return 0;
 }
-
-
-//22.Develop a C program to create a thread that calculates the area of a triangle?
+```
+22.Develop a C program to create a thread that calculates the area of a triangle?
+```
 #include<stdio.h>
 #include<pthread.h>
 struct triangle
@@ -682,8 +692,9 @@ int main(void)
 	pthread_join(pt,NULL);
 	return 0;
 }
-
-//23.Write a C program to create a thread that calculates the sum of squares of numbers from 1 to 100?
+```
+23.Write a C program to create a thread that calculates the sum of squares of numbers from 1 to 100?
+```
 #include<stdio.h>
 #include<pthread.h>
 void *fun(void *arg)
@@ -704,8 +715,9 @@ int main(void)
 	pthread_join(pt,NULL);
 	return 0;
 }
-
-//24.Write a C program to create a thread that generates a random array of integers?
+```
+24.Write a C program to create a thread that generates a random array of integers?
+```
 #include<stdio.h>
 #include<pthread.h>
 #include<stdlib.h>
@@ -730,8 +742,9 @@ int main(void)
 	pthread_join(pt,NULL);
 	return 0;
 }
-
-//25.Implement a C program to create a thread that performs bubble sort on an array of integers?
+```
+25.Implement a C program to create a thread that performs bubble sort on an array of integers?
+```
 #include<stdio.h>
 #include<pthread.h>
 void *fun(void *arg)
@@ -770,8 +783,9 @@ int main(void)
 	pthread_join(pt,NULL);
 	return 0;
 }
-
-//26.Develop a C program to create a thread that calculates the greatest common divisor (GCD) of two numbers?
+```
+26.Develop a C program to create a thread that calculates the greatest common divisor (GCD) of two numbers?
+```
 #include<stdio.h>
 #include<pthread.h>
 void *fun(void *arg)
@@ -795,8 +809,9 @@ int main(void)
 	pthread_join(pt,NULL);
 	return 0;
 }
-
-//27.Write a C program to create a thread that calculates the sum of Fibonacci numbers up to a given limit?
+```
+27.Write a C program to create a thread that calculates the sum of Fibonacci numbers up to a given limit?
+```
 #include<stdio.h>
 #include<pthread.h>
 void *fun(void *arg)
@@ -827,8 +842,9 @@ int main(void)
 	pthread_join(pt,NULL);
 	return 0;
 }
-
-//28.Implement a C program to create a thread that calculates the sum of even numbers from 1 to 100?
+```
+28.Implement a C program to create a thread that calculates the sum of even numbers from 1 to 100?
+```
 #include<stdio.h>
 #include<pthread.h>
 void *fun(void*arg)
@@ -851,8 +867,9 @@ int main(void)
 	pthread_join(pt,NULL);
 	return 0;
 }
-
-//29.Develop a C program to create a thread that calculates the factorial of a given number using iteration? 
+```
+29.Develop a C program to create a thread that calculates the factorial of a given number using iteration? 
+```
 #include<stdio.h>
 #include<pthread.h>
 void *fun(void *arg)
@@ -879,7 +896,7 @@ int main(void)
 	pthread_join(pt,NULL);
 	return 0;
 }
-
+```
 31.Implement a C program to create a thread that performs multiplication of two matrices?
 ```
 #include<stdio.h>
